@@ -1,3 +1,13 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
 body {
-    background-color: aqua;
+    background-color: #FEFFD2;
+    text-align: center;
+}
+
+#container-fluid {
+    text-align: center;
 }
