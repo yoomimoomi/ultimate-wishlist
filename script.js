@@ -1,5 +1,4 @@
-let total
-let
+let total = null
 
 // let entry = {
 //     total: total;
