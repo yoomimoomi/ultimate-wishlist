@@ -11,3 +11,15 @@ body {
 #container-fluid {
     text-align: center;
 }
+
+/* . refers to the entryForm class in create.html */
+.entryForm{ 
+    color: #000000;
+    
+}
+
+.u1{
+    display: flex;
+    padding: 7px;
+    border: 1px solid #AEE2FF;
+}
