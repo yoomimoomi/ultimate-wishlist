@@ -31,6 +31,10 @@
         </div>
 
         <div class="entryForm">
+            <label>Price</label>
+        <input type="number" class="form" placeholder="Enter Description">
+
+        <div class="entryForm">
             <label>Description</label>
         <input type="text" class="form" placeholder="Enter Description">
 
@@ -43,7 +47,7 @@
         <input type="text" class="form">
 
         <div class="entryForm">
-            <input type="submit" class="btn btn-primary">
+            <input type="submit" class="btn btn-primary" id="enterButton">
         </div>
 
         </form>
@@ -51,27 +55,33 @@
 
 <!-- JAVASCRIPT -->
     <script>
+    // add tags
     document.querySelector("#entryFileInput").addEventListener("change",function () {
+        let imageData = document.querySelector("#imgPreview").value;
         const reader = new FileReader();
 
         reader.addEventListener("load", () => {
-            localStorage.setItem("recent-image", reader.result)
+            sessionStorage.setItem("recent-image", reader.result);
+            document.querySelector("#imgPreview").setAttribute("src", reader.result);
         });
     reader.readAsDataURL(this.files[0]);
     console.log(this.files);
     });
 
     document.addEventListener("DOMContentLoaded", () => {
-        const imageDataUrl = localStorage.getItem("recent-image")
+        const imageDataUrl = sessionStorage.getItem("recent-image")
 
         if (imageDataUrl) {
             document.querySelector("#imgPreview").setAttribute("src", imageDataUrl);
         }
 
     });
-    console.log(this.files);
+
+const enterButton = document.querySelector("submit")
+    
     </script>
 </body>
+
 
 <!-- BOOTSTRAP LINK -->
 <script 
