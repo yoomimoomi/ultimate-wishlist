@@ -19,7 +19,7 @@
       <h1>Create Entry</h1>
 
       <div class="container">
-        <input type="file" id="entryFileInput">
+        <input type="file" id="entryImageInput">
         <img src="" id="imgPreview" alt="preview">
     </div>
       <div class="container">
@@ -27,27 +27,27 @@
         <form id="createEntryForm">
         <div class="entryForm">
             <label>Title</label>
-        <input type="text" class="form" placeholder="Enter Title">
+        <input type="text" class="form" placeholder="Enter Title" id="title">
         </div>
 
         <div class="entryForm">
             <label>Price</label>
-        <input type="number" class="form" placeholder="Enter Description">
+        <input type="number" class="form" placeholder="Enter Description" id="price">
 
         <div class="entryForm">
             <label>Description</label>
-        <input type="text" class="form" placeholder="Enter Description">
+        <input type="text" class="form" placeholder="Enter Description" id="desc">
 
         <div class="entryForm">
             <label>Link</label>
-        <input type="text" class="form" placeholder="Add Link">
+        <input type="url" class="form" placeholder="Add Link" id="link">
 
         <div class="entryForm">
             <label>Add tags</label>
         <input type="text" class="form">
 
         <div class="entryForm">
-            <input type="submit" class="btn btn-primary" id="enterButton">
+            <input type="submit" class="btn btn-primary" id="enter">
         </div>
 
         </form>
@@ -55,9 +55,10 @@
 
 <!-- JAVASCRIPT -->
     <script>
+    const fileInput = document.getElementById("#entryImageInput");
     // add tags
-    document.querySelector("#entryFileInput").addEventListener("change",function () {
-        let imageData = document.querySelector("#imgPreview").value;
+    fileInput.addEventListener("change",function (event) {
+        let imageData = document.getElementById("#imgPreview").value;
         const reader = new FileReader();
 
         reader.addEventListener("load", () => {
@@ -77,8 +78,36 @@
 
     });
 
-const enterButton = document.querySelector("submit")
+    const enterButton = getElementById("#enter")
+    //submition input
     
+    enterButton.addEventListener("click", () => {
+        const reader = new FileReader();
+
+        let itemName = document.getElementById("#title").value
+        let descInput = document.getElementById("#desc").value
+        let linkInput = document.getElementById("#link").value
+        let priceInput = document.getElementById("#price").value
+
+        //new OBJ
+        let entry = {
+            image : imageData,
+            item : itemName,
+            description : descInput,
+            link : linkInput,
+            price : priceInput
+        }
+
+        let entrySubmit = JSON.parse(localStorage.getItem("entrySubmit")) || [];
+
+        entrySubmit.push(entry);
+
+        localStorage.setItem("entrySubmit", JSON.stringify(entrySubmit));
+
+        window.location.href = "main.html";
+        console.log(localStorage);
+    });
+   
     </script>
 </body>
 
