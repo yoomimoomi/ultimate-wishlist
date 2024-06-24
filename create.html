@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">   
+<html lang="en" dir="ltr">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create Form</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="stylesheet.css" rel="stylesheet" type="text/css"/>
+    <!-- Unicons CDN Link for Icons -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/thinline.css">
 </head>
 
 
@@ -31,31 +33,44 @@
         </div>
 
         <div class="entryForm">
+            <label>Price</label>
+        <input type="number" class="form" placeholder="Enter Description">
+
+        <div class="entryForm">
             <label>Description</label>
         <input type="text" class="form" placeholder="Enter Description">
 
         <div class="entryForm">
             <label>Link</label>
         <input type="text" class="form" placeholder="Add Link">
-
+        
         <div class="entryForm">
-            <div class="tags">
-                <label>Add tags</label>
+            <label>Add tags</label>
                 <input type="text" class="form">
+        </div>
 
+        <div class="wrapper">
+            <div class="title">
+                <h2>Add Tags</h2>
+            </div>
+
+            <div class="content">
+                <p>Add tags here</p>
                 <u1>
                     <li>html <i class="uit uit-multiply"></i></li>
                     <li>css <i class="uit uit-multiply"></i></li>
+                    <input type="text">
                 </u1>
-                
-            </div>
+            </div>    
+            
             <div class="details">
                 <p><span>10</span> tags are remaining</p>
-                <button>Remove all</button>
+                <button>Remove All</button>
             </div>
-
+        </div>
+        
         <div class="entryForm">
-            <input type="submit" class="btn btn-primary">
+            <input type="submit" class="btn btn-primary" id="enterButton">
         </div>
 
         </form>
@@ -63,27 +78,33 @@
 
 <!-- JAVASCRIPT -->
     <script>
+    // add tags
     document.querySelector("#entryFileInput").addEventListener("change",function () {
+        let imageData = document.querySelector("#imgPreview").value;
         const reader = new FileReader();
 
         reader.addEventListener("load", () => {
-            localStorage.setItem("recent-image", reader.result)
+            sessionStorage.setItem("recent-image", reader.result);
+            document.querySelector("#imgPreview").setAttribute("src", reader.result);
         });
     reader.readAsDataURL(this.files[0]);
     console.log(this.files);
     });
 
     document.addEventListener("DOMContentLoaded", () => {
-        const imageDataUrl = localStorage.getItem("recent-image")
+        const imageDataUrl = sessionStorage.getItem("recent-image")
 
         if (imageDataUrl) {
             document.querySelector("#imgPreview").setAttribute("src", imageDataUrl);
         }
 
     });
-    console.log(this.files);
+
+const enterButton = document.querySelector("submit")
+    
     </script>
 </body>
+
 
 <!-- BOOTSTRAP LINK -->
 <script 
