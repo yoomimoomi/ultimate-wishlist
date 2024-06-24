@@ -4,10 +4,99 @@
     box-sizing: border-box;
 }
 body {
-    background-color: #E6FFFD;
+    background-color: #B799FF;
     text-align: center;
 }
 
 #container-fluid {
     text-align: center;
+}
+
+/* . refers to the entryForm class in create.html 
+Box for everything in wrapper class */
+.wrapper{ 
+    width: 490px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 18px 25px 20px;
+    text-align: center;
+    
+}
+
+.wrapper :where(.title, li, li i, .details){
+    display: flex;
+    align-items: center;
+}
+
+/* "Add Tags" text */
+.wrapper .title h2{
+    font-size: 21px;
+    font-weight: 600;
+}
+
+.wrapper .content{
+    margin: 10px 0;
+}
+
+/* "Add tags here" text */
+.content p{
+    font-size: 15px;
+    text-align: left;
+}
+
+/* box around tags */
+.content u1{
+    display: flex;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 12px 0;
+    border: 1px solid #AEE2FF;
+}
+
+/* box around tags (html, css) */
+.content u1 li{
+    list-style: none;
+    margin: 4px 3px;
+    border-radius: 5px;
+    background: #f2f2f2;
+    padding: 5px 8px 5px 10px;
+    border: 1px solid #f2f2f2
+}
+
+/* x button on tags 7:37*/
+.content u1 li i{
+    height: 20px;
+    width: 20px;
+    cursor: pointer; /* when hovering over x on tags, cursor becomes a pointer */
+    color: #aa6b6b;
+    font-size: 12px;
+    margin-left:8px;
+    border-radius: 50%;
+    background: #dfdfdf;
+    justify-content: center;
+}
+/* supposed to make the input box disappear 8:23 */
+.content ul input{
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 5px;
+    font-size: 16px;
+}
+
+/* "Remove all" button right-aligned */
+.wrapper .details{
+    justify-content: space-between;
+}
+
+/* Remove all button 9:17 */
+.details button{
+    border: none;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 9px 15px;
+    border-radius: 5px;
+    background: #5372F0;
 }
