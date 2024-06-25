@@ -89,7 +89,7 @@ Box for everything in wrapper class */
     justify-content: space-between;
 }
 
-/* Remove all button 9:17 */
+/* "Remove all" button 9:17 */
 .details button{
     border: none;
     outline: none;

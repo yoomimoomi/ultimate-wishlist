@@ -14,68 +14,78 @@
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-          <img src="posttable icon.png" alt="posttable icon" width="60" height="50">
+          <img src="" alt="posttable icon" width="60" height="50">
           <h1 class="navbar-brand mx-auto" href="index.html">WishTree</h1>
         </div>
     </nav>
-      <h1>Create Entry</h1>
 
-      <div class="container">
-        <input type="file" id="entryFileInput">
-        <img src="" id="imgPreview" alt="preview">
-    </div>
-      <div class="container">
+    <h1>Create Entry</h1>
+
+        <div class="container">
+            <input type="file" id="entryFileInput">
+            <img src="" id="imgPreview" alt="preview">
+        </div>
+
+    <div class="container">
 
         <form id="createEntryForm">
-        <div class="entryForm">
-            <label>Title</label>
-        <input type="text" class="form" placeholder="Enter Title">
-        </div>
+            <div class="entryForm">
+                <label>Title</label>
+                <input type="text" class="form" placeholder="Enter Title">
+            </div>
 
-        <div class="entryForm">
-            <label>Price</label>
-        <input type="number" class="form" placeholder="Enter Description">
+            <div class="entryForm">
+                <label>Price</label>
+                <input type="number" class="form" placeholder="Enter Description">
+            </div>
 
-        <div class="entryForm">
-            <label>Description</label>
-        <input type="text" class="form" placeholder="Enter Description">
+            <div class="entryForm">
+                <label>Description</label>
+                <input type="text" class="form" placeholder="Enter Description">
+            </div>
 
-        <div class="entryForm">
-            <label>Link</label>
-        <input type="text" class="form" placeholder="Add Link">
+            <div class="entryForm">
+                <label>Link</label>
+                <input type="text" class="form" placeholder="Add Link">
+            </div>
         
-        <div class="entryForm">
-            <label>Add tags</label>
+            <div class="entryForm">
+                <label>Add tags</label>
                 <input type="text" class="form">
-        </div>
-
-        <div class="wrapper">
-            <div class="title">
-                <h2>Add Tags</h2>
             </div>
-
-            <div class="content">
-                <p>Add tags here</p>
-                <u1>
-                    <li>html <i class="uit uit-multiply"></i></li>
-                    <li>css <i class="uit uit-multiply"></i></li>
-                    <input type="text">
-                </u1>
-            </div>    
             
-            <div class="details">
-                <p><span>10</span> tags are remaining</p>
-                <button>Remove All</button>
+            <div class="entryForm">
+            <div class="wrapper">
+                <div class="title">
+                    <h2>Add Tags</h2>
+                </div>
+
+                <div class="content">
+                    <p>Add tags here</p>
+                    <u1>
+                        <li>html <i class="uit uit-multiply"></i></li>
+                        <li>css <i class="uit uit-multiply"></i></li>
+                        <input type="text">
+                    </u1>
+                </div>    
+            
+                <div class="details">
+                    <p><span>10</span> tags are remaining</p>
+                    <button>Remove All</button>
+                </div>
             </div>
-        </div>
-        
-        <div class="entryForm">
-            <input type="submit" class="btn btn-primary" id="enterButton">
-        </div>
+            </div>
+            
+            
+
+            <div class="entryForm">
+                <input type="submit" class="btn btn-primary" id="enterButton">
+            </div>
 
         </form>
     </div>
-
+    
+    <script src="tagScript.js"></script>
 <!-- JAVASCRIPT -->
     <script>
     // add tags
