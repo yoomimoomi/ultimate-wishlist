@@ -29,25 +29,23 @@
     <div class="container">
 
         <form id="createEntryForm">
-            <div class="entryForm">
-                <label>Title</label>
-                <input type="text" class="form" placeholder="Enter Title">
-            </div>
+        <div class="entryForm">
+            <label>Title</label>
+        <input type="text" class="form" placeholder="Enter Title" id="title">
+        </div>
 
-            <div class="entryForm">
-                <label>Price</label>
-                <input type="number" class="form" placeholder="Enter Description">
-            </div>
+        <div class="entryForm">
+            <label>Price</label>
+        <input type="number" class="form" placeholder="Enter Description" id="price">
 
-            <div class="entryForm">
-                <label>Description</label>
-                <input type="text" class="form" placeholder="Enter Description">
-            </div>
+        <div class="entryForm">
+            <label>Description</label>
+        <input type="text" class="form" placeholder="Enter Description" id="desc">
 
-            <div class="entryForm">
-                <label>Link</label>
-                <input type="text" class="form" placeholder="Add Link">
-            </div>
+        <div class="entryForm">
+            <label>Link</label>
+			
+        <input type="url" class="form" placeholder="Add Link" id="link">
         
             <div class="entryForm">
                 <label>Add tags</label>
@@ -69,18 +67,15 @@
                     </u1>
                 </div>    
             
-                <div class="details">
-                    <p><span>10</span> tags are remaining</p>
-                    <button>Remove All</button>
-                </div>
+            <div class="details">
+                <p><span>10</span> tags are remaining</p>
+                <button>Remove All</button>
             </div>
-            </div>
-            
-            
-
-            <div class="entryForm">
-                <input type="submit" class="btn btn-primary" id="enterButton">
-            </div>
+        </div>
+        
+        <div class="entryForm">
+            <input type="submit" class="btn btn-primary" id="enter">
+        </div>
 
         </form>
     </div>
@@ -88,8 +83,7 @@
     <script src="tagScript.js"></script>
 <!-- JAVASCRIPT -->
     <script>
-    // add tags
-    document.querySelector("#entryFileInput").addEventListener("change",function () {
+     document.querySelector("#entryFileInput").addEventListener("change",function () {
         let imageData = document.querySelector("#imgPreview").value;
         const reader = new FileReader();
 
@@ -109,9 +103,38 @@
         }
 
     });
-
-const enterButton = document.querySelector("submit")
+    const enterButton = document.getElementById("#enter")
+    //submition input
     
+    enterButton.addEventListener("click", () => {
+        const reader = new FileReader();
+
+        let itemName = document.getElementById("#title").value
+        let descInput = document.getElementById("#desc").value
+        let linkInput = document.getElementById("#link").value
+        let priceInput = document.getElementById("#price").value
+
+        //new OBJ
+        let entry = {
+            image : imageData,
+            item : itemName,
+            description : descInput,
+            link : linkInput,
+            price : priceInput
+        }
+
+        let entrySubmit = JSON.parse(localStorage.getItem("entrySubmit")) || [];
+
+        entrySubmit.push(entry);
+
+        reader.sessionStorage.setItem("recent-image", reader.result)
+
+        localStorage.setItem("entrySubmit", JSON.stringify(entrySubmit));
+
+        window.location.href = "main.html";
+        console.log(this.files);
+    });
+   
     </script>
 </body>
 
