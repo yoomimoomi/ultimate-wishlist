@@ -47,7 +47,6 @@ Box for everything in wrapper class */
 /* box around tags */
 .content u1{
     display: flex;
-    flex-wrap: wrap; /* fixed: tags outside of box */
     padding: 5px;
     border-radius: 5px;
     margin: 12px 0;
@@ -90,7 +89,7 @@ Box for everything in wrapper class */
     justify-content: space-between;
 }
 
-/* "Remove all" button 9:17 */
+/* Remove all button 9:17 */
 .details button{
     border: none;
     outline: none;
