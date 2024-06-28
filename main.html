@@ -12,8 +12,8 @@
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-          <img src="posttable icon.png" alt="posttable icon" width="60" height="50">
-          <a href = "profile.html">Profile</a>
+          <img src="assets/iconPlaceholder.png" alt="wishtree icon" width="60" height="50"></a>
+          <img href="profile.html" src="placeholder.jpg">
           <h1 class="navbar-brand mx-auto" href="index.html">WishTree</h1>
           <a href ="index.html">Log Out</a>
         </div>
@@ -21,27 +21,67 @@
 
     <div class="container">
         <a href="create.html" class="btn btn-primary" >Create</a>
-        <button><p>Sort</p></button>
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Sort
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">A-Z</a></li>
+            <li><a class="dropdown-item" href="#">Most Recent</a></li>
+            <li><a class="dropdown-item" href="#">Price</a></li>
+            <li><a class="dropdown-item" href="#">Custom</a></li>
+          </ul>
+        </div>
         <button><p>Delete</p></button>
     </div>
 
     <input type="search" placeholder="Search" id="searchBar">
-
-    <div class="card" style="width: 18rem;">
-        <img src="assets/placeholder.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-        </div>
-      </div>
+    <div class="container" id="entryContainer">
       <div class="card" style="width: 18rem;">
-        <img src="assets/placeholder.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
+          <img src="assets/placeholder.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+          </div>
         </div>
-        
-      </div>
+        <div class="card" style="width: 18rem;">
+          <img src="assets/placeholder.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <button id="favorite"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+              <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
+            </svg>
+          </button>
+          </div>
+        </div>
+    </div>
 </body>
 
 <script>
-const imageDataUrl = sessionStorage.getItem("recent-image")
+let entries = JSON.parse(localStorage.getItem("entrySubmit")) || [];
+const container = document.querySelector("#entryContainer");
+
+// function updateEntries() {
+//   localStorage.setItem("entries", JSON.stringify(entries));
+//   render();
+// }
+
+function render() {
+  entries.forEach((entry, index) => {
+    let card = document.createElement("div");
+    card.className = "newEntry"
+    card.innerHTML = `
+        <div class="card"
+        <div class="card-body">
+          <h5 class="card-title">${entry.item}</h5>
+          <p class="card-text">Desc: ${entry.description}</p>
+          <p class="card-text">Price: ${entry.price}</p>
+          <p class="card-text">Link: ${entry.link}</p>
+        </div>
+        </div>
+      `;
+      container.appendChild(card);
+  });
+}
+
+  render();
 </script>
 
 <script 
