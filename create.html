@@ -103,7 +103,12 @@
     enterButton.addEventListener("click", () => {
         const reader = new FileReader();
 
-        // let imageString = reader.readAsDataURL("#entryFileInput");
+        // reader.addEventListener("load", () => {
+        //     localStorage.setItem("recent-image", reader.result);
+        //     document.querySelector("#imgPreview").setAttribute("src", reader.result);
+        // });
+
+        let imageString = localStorage.getItem("recent-image")
         let itemName = document.querySelector("#title").value
         let descInput = document.querySelector("#desc").value
         let linkInput = document.querySelector("#link").value
@@ -111,7 +116,7 @@
 
         //new OBJ
         let entry = {
-            // image : imageString,
+            image : imageString,
             item : itemName,
             description : descInput,
             link : linkInput,
