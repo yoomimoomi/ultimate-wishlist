@@ -5,12 +5,19 @@
 }
 body {
     background-color: #E6FFFD;
-    text-align: center;
+    text-align: left;
 }
 
-#container-fluid {
+.container-fluid {
     text-align: center;
+    background-color: #B799FF;
+    margin-top: -10px;
+    margin-bottom: -10px;
+    padding: 20px;
+
 }
+
+
 
 /* . refers to the entryForm class in create.html 
 Box for everything in wrapper class */

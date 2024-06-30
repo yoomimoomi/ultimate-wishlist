@@ -10,21 +10,23 @@
 
 
 <body>
+  <!-- Top of the page, header -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
           <img src="assets/iconPlaceholder.png" alt="wishtree icon" width="60" height="50"></a>
           <img href="profile.html" src="placeholder.jpg">
           <h1 class="navbar-brand mx-auto" href="index.html">WishTree</h1>
-          <a href ="index.html">Log Out</a>
+          <a href ="index.html" class="btn btn-primary" id= "logOutButton" >Log Out</a>
         </div>
       </nav>
-
+      <!-- Create button, Sort button -->
     <div class="container">
-        <a href="create.html" class="btn btn-primary" id="createButton" >Create</a>
+        <a href="create.html" id="createButton" class="btn btn-primary" >Create</a>
+
+        <!--Sort Button -->
         <div class="dropdown">
           <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="sortButton">
-            Sort
-          </button>
+            Sort</button>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="#">A-Z</a></li>
             <li><a class="dropdown-item" href="#">Most Recent</a></li>
@@ -33,16 +35,20 @@
           </ul>
         </div>
     </div>
+      <!-- Search Bar -->
       <div class="container" id="searchContainer">
         <input type="search" placeholder="Search" id="searchBar" class="form-control">
+        <button type="submit" id="searchSubmitButton">Submit</button>
       </div>
+      <!--Card Test #1 -->
     <div class="container">
-      <div class="card" style="width: 18rem;">
+      <div class="card">
           <img src="assets/placeholder.jpg" class="card-img-top" alt="...">
           <div class="card-body">
           </div>
         </div>
-        <div class="card" style="width: 18rem;">
+        <!--Card Test #2 w/ heart icon -->
+        <div class="card">
           <img src="assets/placeholder.jpg" class="card-img-top" alt="...">
           <div class="card-body">
             <button id="favorite"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
@@ -72,14 +78,14 @@ function render() {
     let card = document.createElement("div");
     card.className = "newEntry"
     card.innerHTML = `
-        <div class="card" style="width: 18rem;">
+        <div class="card">
         <div class="card-body">
           <img class= "card-img-top" src=${entry.image}>
           <h5 class="card-title">${entry.item}</h5>
-          <p class="card-text">Desc: ${entry.description}</p>
+          <p class="card-text">Description: ${entry.description}</p>
           <p class="card-text">Price: ${entry.price}</p>
           <p class="card-text">Link: ${entry.link}</p>
-          <button class="btn btn-danger remove-btn" onclick="removeEntry(${index})">Delete</button>
+          <button class="btn btn-danger remove-btn" onclick="removeEntry(${index})" id="entryDeleteButton">Delete</button>
         </div>
         </div>
       `;

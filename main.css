@@ -1,26 +1,82 @@
-* {
+* { /* CSS Universal Selector - Selects HTML elements on the page */
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
 
+#logOutButton{
+    background-color:#93a8ff;
+    border: none;
+    color: black;
+}
+
 #createButton{
-    text-align: left;
+    float: left;
+    text-align: center;
+    margin-top: 15px;
+    background-color: #93a8ff;
+    color:black;
+    border: none;
 }
 
 #sortButton{
-    text-align: right;
-}
-body {
-    background-color: #E6FFFD;
+    float: right;
     text-align: center;
+    margin-top: 15px;
+    background-color: #93a8ff;
+    color:black;
+    border: none;
 }
 
-#container-fluid {
+#searchBar{
+    display: block;
+    text-align: left;
+    margin-top: 40px;
+}
+
+#searchSubmitButton{
+    float: right;
+    padding: 6px;
+    margin-top: -38px;
+    background: #93a8ff;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+
+body {
+    background-color: #E6FFFD;
+    /*text-align: center;*/
+}
+
+/* Top of the page, header */
+.container-fluid {
     text-align: center;
+    background-color: #B799FF;
+    margin-top: -10px;
+    margin-bottom: -10px;
+    padding: 20px;
+
 }
 
 #searchContainer {
     padding: 30px;
+}
+
+/* Entries */
+.card{
+    background-color: #AEE2FF;
+    padding: 18px;
+    margin-top: 20px;
+    max-width: 33.33%;
+    /* max-width: 18rem; */
+    text-align: left;
+    float: left;
+}
+
+#entryDeleteButton{
+    background-color: #93a8ff;
+    color:black;
+    border: none;
 }
 
