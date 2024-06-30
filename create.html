@@ -5,67 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create Form</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link href="stylesheet.css" rel="stylesheet" type="text/css"/>
+    <link href="create.css" rel="stylesheet" type="text/css"/>
     <!-- Unicons CDN Link for Icons -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/thinline.css">
 </head>
 
 
 <body>
+    <!-- Top of the page, header -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
           <img src="" alt="posttable icon" width="60" height="50">
           <h1 class="navbar-brand mx-auto" href="index.html">WishTree</h1>
         </div>
     </nav>
-
-      <div class="container">
+    <!-- For image? -->
+    <div class="container">
         <div class="imageWrapper">
-        <input type="file" id="entryFileInput">
-        <img src="" id="imgPreview" alt="preview" class="imageFormat">
+            <input type="file" id="entryFileInput">
+            <img src="" id="imgPreview" alt="preview" class="imageFormat">
+        </div>
     </div>
-    </div>
-      <div class="container">
+    
+    <div class="container">
 
         <form id="createEntryForm">
-        <div class="entryForm">
-            <label>Title</label>
-        <input type="text" class="form-control" placeholder="Enter Title" id="title" onsubmit="returnfalse">
-        </div>
-
-        <div class="entryForm">
-            <label>Price</label>
-        <input type="number" class="form-control" placeholder="Enter Description" id="price">
-
-        <div class="entryForm">
-            <label>Description</label>
-        <input type="text" class="form-control" placeholder="Enter Description" id="desc">
-
-        <div class="entryForm">
-            <label>Link</label>
-			
-        <input type="url" class="form-control" placeholder="Add Link" id="link">
-        
             <div class="entryForm">
-            <div class="wrapper">
-                <div class="title">
-                    <h2>Add Tags</h2>
-                </div>
-
-                <div class="content">
-                    <p>Add tags here</p>
-                    <u1><input type="text"></u1>
-                </div>    
-            
-            <div class="details">
-                <p><span>_</span> tags are remaining</p>
-                <button>Remove All</button>
+                <label>Title</label>
+                <input type="text" class="form-control" placeholder="Enter Title" id="title" onsubmit="returnfalse">
             </div>
-        </div>
-        
-        <div class="entryForm">
-            <button type="button" class="btn btn-primary" id="enter">Submit
-        </div>
+
+            <div class="entryForm">
+                <label>Price</label>
+                <input type="number" class="form-control" placeholder="Enter Price" id="price">
+            </div>
+
+            <div class="entryForm">
+                <label>Description</label>
+                <input type="text" class="form-control" placeholder="Enter Description" id="desc">
+            </div>
+
+            <div class="entryForm">
+                <label>Link</label>
+                <input type="url" class="form-control" placeholder="Add Link" id="link">
+            </div>
+
+            <div class="entryForm">
+                <div class="wrapper">
+                    <div class="title">
+                        <h2>Add Tags</h2>
+                    </div>
+
+                    <div class="content">
+                        <p>Add tags here</p>
+                        <u1><input type="text"></u1>
+                    </div>    
+                
+                <div class="details">
+                    <p><span>_</span> tags are remaining</p>
+                    <button>Remove All</button>
+                </div>
+            </div>
+            
+            <div class="entryForm">
+                <button type="button" class="btn btn-primary" id="enter">Submit
+            </div>
 
         </form>
     </div>
