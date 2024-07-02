@@ -17,19 +17,23 @@
         <div class="container-fluid">
           <img src="" alt="posttable icon" width="60" height="50">
           <h1 class="navbar-brand mx-auto" href="index.html">WishTree</h1>
+          <a href="main.html" class="btn btn-primary" id="returnButton">Return</a>
         </div>
     </nav>
-    <!-- For image? -->
+    <!-- For image -->
     <div class="container">
         <div class="imageWrapper">
-            <input type="file" id="entryFileInput">
+            <!-- "Preview"-->
             <img src="" id="imgPreview" alt="preview" class="imageFormat">
+            <!-- "Choose File"-->
+            <input type="file"  id="entryFileInput">
         </div>
     </div>
     
     <div class="container">
 
         <form id="createEntryForm">
+
             <div class="entryForm">
                 <label>Title</label>
                 <input type="text" class="form-control" placeholder="Enter Title" id="title" onsubmit="returnfalse">
@@ -51,14 +55,15 @@
             </div>
 
             <div class="entryForm">
+                <label>Tags</label>
+            </div>
+
+            <!-- Tag Input Box -->
+            <div class="entryForm">
                 <div class="wrapper">
-                    <div class="title">
-                        <h2>Add Tags</h2>
-                    </div>
 
                     <div class="content">
-                        <p>Add tags here</p>
-                        <u1><input type="text"></u1>
+                        <u1><input type="text" id="inputTag" placeholder="Add Tags"></u1>
                     </div>    
                 
                 <div class="details">
@@ -67,6 +72,8 @@
                 </div>
             </div>
             
+
+
             <div class="entryForm">
                 <button type="button" class="btn btn-primary" id="enter">Submit
             </div>
@@ -74,7 +81,6 @@
         </form>
     </div>
     
-    <a href="main.html">return</a>
 
     <script src="tagScript.js"></script>
 
