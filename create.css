@@ -5,7 +5,10 @@
 }
 body {
     background-color: #E6FFFD;
-    text-align: left;
+}
+
+#wishTreeTitle{
+    font-size: x-large;
 }
 
 .container-fluid {
@@ -17,7 +20,53 @@ body {
 
 }
 
+#returnButton{
+    float: right;
+    background-color: #93a8ff;
+    border: none;
+    color: black;
+}
 
+/* Preview Image */
+#imgPreview{
+    float: left;
+    background-color: #AEE2FF;
+    padding: 20px;
+    width: 40%;
+    height: 70%;
+
+    margin-top: 10%;
+    margin-left: 4%;
+    
+}
+
+#entryFileInput{
+    background-color: #AEE2FF;
+    
+    width: 30%;
+    margin-top: 5%;
+    margin-left: -40%;
+
+}
+
+/* Box underneath Inputs */
+#createEntryForm{
+    float: right;
+    background-color: #AEE2FF;
+    padding: 20px;
+    text-align: left;
+    border-radius: 10px;
+    width: 40%;
+    height: 70%;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    margin-top: 0%;
+    margin-right: 10%;
+    
+}
 
 /* . refers to the entryForm class in create.html 
 Box for everything in wrapper class */
@@ -27,6 +76,8 @@ Box for everything in wrapper class */
     border-radius: 10px;
     padding: 18px 25px 20px;
     text-align: center;
+
+    width: 100%;
     
 }
 
@@ -35,25 +86,26 @@ Box for everything in wrapper class */
     align-items: center;
 }
 
-/* "Add Tags" text */
+/* "Add Tags" text 
 .wrapper .title h2{
     font-size: 21px;
     font-weight: 600;
-}
+}*/
 
 .wrapper .content{
     margin: 10px 0;
 }
 
-/* "Add tags here" text */
+/* "Add tags here" text 
 .content p{
     font-size: 15px;
     text-align: left;
-}
+}*/
 
 /* box around tags */
 .content u1{
     display: flex;
+    flex-wrap: wrap; /* Fixes: When inputing 4 tags or more, the tags aren't stacked on top of one another. It continues horizontally. */
     padding: 5px;
     border-radius: 5px;
     margin: 12px 0;
@@ -81,14 +133,17 @@ Box for everything in wrapper class */
     border-radius: 50%;
     background: #dfdfdf;
     justify-content: center;
+    
 }
 /* supposed to make the input box disappear 8:23 */
-.content ul input{
+#inputTag{
     flex: 1;
     border: none;
     outline: none;
     padding: 5px;
     font-size: 16px;
+    float: left;
+    width: 100%;
 }
 
 /* "Remove all" button right-aligned */
@@ -100,10 +155,18 @@ Box for everything in wrapper class */
 .details button{
     border: none;
     outline: none;
-    color: #fff;
+    color: black;
     cursor: pointer;
     font-size: 14px;
     padding: 9px 15px;
     border-radius: 5px;
-    background: #5372F0;
+    background: #93a8ff;
+}
+
+/* Submit button */
+#enter{
+    margin-top: 20px;
+    background-color: #93a8ff;
+    color: black;
+    border: none;
 }
