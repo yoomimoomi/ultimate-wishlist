@@ -4,10 +4,6 @@
     box-sizing: border-box;
 }
 
-#wishTreeTitle{
-    font-size: x-large;
-}
-
 #logOutButton{
     background-color:#93a8ff;
     border: none;
@@ -70,54 +66,18 @@ body {
 /* Entries */
 .card{
     background-color: #AEE2FF;
-    padding: 0px;
-    margin-top: 10px;
+    padding: 18px;
+    margin-top: 20px;
     max-width: 33.33%;
     /* max-width: 18rem; */
     text-align: left;
     float: left;
     margin-left: 10px;
-    margin-bottom: 10px
-}
-
-.card-title{
-    margin-top: 20px;
-    font-size: x-large;
-}
-
-.card-text{
-    display: wrap;
-    flex-wrap: wrap;
-
 }
 
 #entryDeleteButton{
     background-color: #93a8ff;
     color:black;
     border: none;
-    float: right;
 }
 
-#total{
-    font-size:x-large;
-    text-align: left;
-    margin-left: 30px;
-
-    /* Positions total: relative to the footer */
-    clear: both;
-    position: relative;
-    height: 40px;
-    top: 9px;
-    
-}
-
-.footer{ 
-    /* Positions footer relative to the entries... */
-    clear: both;
-    position: relative;
-    height: 50px;
-
-    text-align: left;
-    background-color: #B799FF;
-    
-}

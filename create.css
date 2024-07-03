@@ -7,10 +7,6 @@ body {
     background-color: #E6FFFD;
 }
 
-#wishTreeTitle{
-    font-size: x-large;
-}
-
 .container-fluid {
     text-align: center;
     background-color: #B799FF;
@@ -35,7 +31,7 @@ body {
     width: 40%;
     height: 70%;
 
-    margin-top: 10%;
+    margin-top: 13%;
     margin-left: 4%;
     
 }
@@ -105,7 +101,6 @@ Box for everything in wrapper class */
 /* box around tags */
 .content u1{
     display: flex;
-    flex-wrap: wrap; /* Fixes: When inputing 4 tags or more, the tags aren't stacked on top of one another. It continues horizontally. */
     padding: 5px;
     border-radius: 5px;
     margin: 12px 0;
@@ -120,6 +115,7 @@ Box for everything in wrapper class */
     background: #f2f2f2;
     padding: 5px 8px 5px 10px;
     border: 1px solid #f2f2f2
+
 }
 
 /* x button on tags 7:37*/
@@ -133,7 +129,6 @@ Box for everything in wrapper class */
     border-radius: 50%;
     background: #dfdfdf;
     justify-content: center;
-    
 }
 /* supposed to make the input box disappear 8:23 */
 #inputTag{
@@ -142,7 +137,7 @@ Box for everything in wrapper class */
     outline: none;
     padding: 5px;
     font-size: 16px;
-    float: left;
+
     width: 100%;
 }
 
@@ -163,7 +158,6 @@ Box for everything in wrapper class */
     background: #93a8ff;
 }
 
-/* Submit button */
 #enter{
     margin-top: 20px;
     background-color: #93a8ff;
