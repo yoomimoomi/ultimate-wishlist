@@ -21,6 +21,9 @@ https://yoomimoomi.github.io/ultimate-wishlist/
 Github Page: 
 https://github.com/yoomimoomi/ultimate-wishlist
 
+Technical Document: 
+https://docs.google.com/document/d/1mIqGjSYKUbkMdVikrbhxgpur18G0i6M118moMfP5wSM/edit?usp=sharing 
+
 Contributor Credits: 
     Team ARK
     - Amanda: https://github.com/yoomimoomi
