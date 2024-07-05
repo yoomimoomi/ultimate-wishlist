@@ -105,13 +105,6 @@
     //submition inpu
 
     enterButton.addEventListener("click", () => {
-        const reader = new FileReader();
-
-        // reader.addEventListener("load", () => {
-        //     localStorage.setItem("recent-image", reader.result);
-        //     document.querySelector("#imgPreview").setAttribute("src", reader.result);
-        // });
-
         let imageString = localStorage.getItem("recent-image")
         let itemName = document.querySelector("#title").value
         let descInput = document.querySelector("#desc").value
@@ -127,7 +120,7 @@
             price : priceInput
         }
 
-        let entrySubmit = JSON.parse(localStorage.getItem("entry")) || [];
+        let entrySubmit = JSON.parse(localStorage.getItem("entrySubmit")) || [];
 
         entrySubmit.push(entry);
         // reader.sessionStorage.setItem("recent-image", reader.result)
