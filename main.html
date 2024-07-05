@@ -45,44 +45,18 @@
       <div class="card">
           <img src="assets/placeholder.jpg" class="card-img-top" alt="...">
           <div class="card-body">
-
-            <h5 class="card-title">Purple Dress</h5>
-            <p class="card-text">Description: 1950S LACE COLD SHOULDER RUFFLE DRESS</p>
-            <p class="card-text">Price: $43.99</p>
-            <p class="card-text">Link: https://www.pinterest.com/pin/157626055697889386/</p>
-            <p class="card-text">Tags: Purple, Dress, Women</p>
-            
-            <button id="favorite" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
-              <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
-              </svg>
-            </button>
-
-            <button class="btn btn-danger remove-btn" id="entryDeleteButton">Delete</button>
-
           </div>
         </div>
-      
-        <!--Card Placeholder #2 -->
-        <div class="placeholder-card">
-          <img src="assets/b.jpeg" class="card-img-top" alt="...">
+        <!--Card Test #2  -->
+        <div class="card">
+          <img src="assets/placeholder.jpg" class="card-img-top" alt="...">
           <div class="card-body">
-            <h5 class="card-title">Blue Suit</h5>
-            <p class="card-text">Description: Men's 3 Piece Slim Fit Suit Set, Two Button Blazer Solid Suit Jacket Vest Pants Tuxedo Set for Wedding Prom</p>
-            <p class="card-text">Price: $113.55</p>
-            <p class="card-text">Link: https://a.co/d/0eixKF3K</p>
-            <p class="card-text">Tags: Blue, Suit, Men</p>
-
-            <button id="favorite" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
-              <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
-              </svg>
-            </button>
-
-            <button class="btn btn-danger remove-btn" id="entryDeleteButton">Delete</button>
+          </button>
           </div>
         </div>
-      </div>
-        <div class="container" id="entryContainer">
-        </div>
+    </div>
+    <div class="container" id="entryContainer">
+    </div>
 
     <div class="footer">
       <label id="total">Total:</label>
@@ -113,7 +87,7 @@ function render() {
           <p class="card-text">Price: ${entry.price}</p>
           <p class="card-text">Link: ${entry.link}</p>
           <button class="btn btn-primary" onclick="removeEntry(${index})" id="entryDeleteButton">Delete</button>
-          <button class="btn btn-primary" id="favorite"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+          <button class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
               <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
             </svg></button>
         </div>
