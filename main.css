@@ -93,14 +93,15 @@ body {
 /* Entries */
 .card{
     background-color: #AEE2FF;
+    float: left;
     padding: 0px;
     margin-top: 10px;
-    max-width: 33.33%;
-    /* max-width: 18rem; */
+    max-width: 18rem;
+    /* max-width: 33.33%; */
     text-align: left;
-    float: left;
     margin-left: 10px;
     margin-bottom: 10px
+    
 }
 
 .card-title{
