@@ -7,6 +7,7 @@ WishTree Features:
     - Login with a username and password
     - Create WishTree entries where users are able to input and save with names/titles, pictures, prices, descriptions, links, and tags
         - Tag Feature: Users can use commas to separate tags and input them all at once.
+        - Windows Users: When filling in tags use "control + enter" to input the tags if return doesn’t work.
         - Mac Users: When filling in tags use "option + return" to input the tags if return doesn't work.
     - Read WishTree entries on the main page
     - Update WishTree entries
