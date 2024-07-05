@@ -27,5 +27,5 @@ https://docs.google.com/document/d/1mIqGjSYKUbkMdVikrbhxgpur18G0i6M118moMfP5wSM/
 
 Contributor Credits: 
     Team ARK
-    - Amanda: https://github.com/yoomimoomi
-    - Karina Lam: https://github.com/Karina-Lam
+    - Amanda Holding: https://github.com/yoomimoomi
+    - Karina Lam: https://github.com/Kyrushiqi
