@@ -16,6 +16,8 @@ WishTree Features:
     - View the total cost of all WishTree entries
     - Search up tags/name of an item
 
+Note: Can't be used on Safari, use Google Chrome. 
+
 Access the website:
 https://yoomimoomi.github.io/ultimate-wishlist/
 
